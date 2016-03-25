@@ -63,7 +63,7 @@
         "icon": "",
         "tag": "timer",
         "description": "the default timer of system",
-        "manager_url": "",
+        "manager_url": "Trunk/Cron/cron.php",
         "author": "cephei",
         "files": [],
         "enable": 1,

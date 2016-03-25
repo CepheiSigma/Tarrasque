@@ -79,6 +79,10 @@ class Cron
         }
     }
 
+    public function getTracerList(){
+        return $this->trackers;
+    }
+
     private function checkPID($pid){
         switch(PHP_OS){
             case "Darwin":
