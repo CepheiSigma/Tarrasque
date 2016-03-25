@@ -54,7 +54,7 @@ class Cron
         foreach($this->trackers as $key=>$tracker) {
             $this->trackers[$key]["lefttime"] = $tracker["lefttime"]-$this->step;
             if($tracker["lefttime"]<=0) {
-                $tracker["lefttime"] = $tracker["time"];
+                $tracker[$key]["lefttime"] = $tracker["time"];
                 $instance = new $tracker["plugin"]();
                 if ($instance == null)
                     continue;
@@ -94,6 +94,3 @@ class Cron
         }
     }
 }
-
-
-
