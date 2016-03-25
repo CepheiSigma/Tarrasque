@@ -21,4 +21,4 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
     );
 }
 Template::assign("conf",Core::getInstance()->singletonMake("system-database")->getConnectionSetting());
-Template::display("Trunk/DataBase/database.tpl");
+Template::display("Trunk/Database/database.tpl");

@@ -14,6 +14,10 @@ class Log{
     }
     public function levelLog($message,$level,$trunk="system"){
         $time = date('Y-m-d H:i:s',time());
+        if(!is_dir(ROOT_PATH."Storage/Log"))
+            mkdir(ROOT_PATH."Storage/Log");
+        if(!is_dir(ROOT_PATH."Storage/Log/Log"))
+            mkdir(ROOT_PATH."Storage/Log/Log");
         switch($level){
             default:
             case "info":
