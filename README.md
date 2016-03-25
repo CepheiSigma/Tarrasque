@@ -11,4 +11,4 @@
 
 QQ:1104272946
 
-<img style="margin-left:-20px;height:50px;width:150px" src="http://7x2wk0.com1.z0.glb.clouddn.com/3421120_9.jpg">
+<img style="margin-left:-20px !important;height:70px !important;width:150px !important;border:0 !important" src="http://7x2wk0.com1.z0.glb.clouddn.com/3QBi.jpg">
