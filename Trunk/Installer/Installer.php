@@ -77,7 +77,7 @@ class Installer{
             }
             if ($config["register"]) {
                 $instance = new $config["register"]();
-                if($config["version"]>$this->modules[$config["name"]]){
+                if(!empty($this->modules[$config["name"]])&&$config["version"]>$this->modules[$config["name"]]){
                     if (method_exists($instance, 'update')) {
                         $instance->update();
                     }
