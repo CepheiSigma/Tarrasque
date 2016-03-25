@@ -160,9 +160,16 @@ class Installer{
         if(array_key_exists("system-curl",$this->modules)) {
             $http = Core::getInstance()->make("system-curl");
             $response = $http->sendRequest("{$this->dependenceRepo}$id/$id.$version.zip");
+            if($response===false){
+                Core::getInstance()->make("log")->levelLog("Can't download dependence [$id - $version] from network!","error","system-installer");
+                return false;
+            }
             $this->createPath("Storage/Installer/Cache/");
-            $fileName = "Storage/Installer/Cache/". md5(time()) . ".zip";
-            file_put_contents($fileName, $response);
+            $fileName = ROOT_PATH."Storage/Installer/Cache/". md5(time()) . ".zip";
+            if(file_put_contents($fileName, $response)===false){
+                Core::getInstance()->make("log")->levelLog("Can't Write dependence [$id - $version] to Cache!","error","system-installer");
+                return false;
+            }
             return $fileName;
         }
         Core::getInstance()->make("log")->levelLog("Curl-Plugin is not exits can't install dependence [$id - $version] from network!","error","system-installer");
