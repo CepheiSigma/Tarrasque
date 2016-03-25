@@ -1,0 +1,72 @@
+{
+    "system-curl": {
+        "id": "1034fc5baa6b42a099f0d4a7b79e38f5",
+        "name": "system-curl",
+        "register": "Trunk\\Curl\\Register_Curl",
+        "icon": "",
+        "enable": 1,
+        "tag": "network-fetcher",
+        "version": 1,
+        "description": "the default network-fetcher of system",
+        "manager_url": "",
+        "author": "cephei",
+        "install_time": 1457589472,
+        "files": []
+    },
+    "system-installer": {
+        "id": "2d769c5aa6464447b2ef993ebef26469",
+        "name": "system-installer",
+        "register": "Trunk\\Installer\\Register_Installer",
+        "icon": "",
+        "enable": 1,
+        "tag": "trunk-installer",
+        "version": 1,
+        "description": "the default trunk-installer of system",
+        "manager_url": "Trunk/Installer/installer.php",
+        "author": "cephei",
+        "install_time": 1457589472,
+        "files": []
+    },
+    "system-database": {
+        "id": "2d769c5aa6464447b2ef993ebef26469",
+        "name": "system-database",
+        "register": "Trunk\\DataBase\\Register_DataBase",
+        "icon": "",
+        "enable": 1,
+        "tag": "database-connector",
+        "version": 1,
+        "description": "the default database-connector of system",
+        "manager_url": "Trunk/Database/database.php",
+        "author": "cephei",
+        "install_time": 1457589472,
+        "files": []
+    },
+    "system-log": {
+        "id": "2d769c5aa6464447b2ef993ebef26469",
+        "name": "system-log",
+        "register": "Trunk\\Log\\Register_Log",
+        "icon": "",
+        "enable": 1,
+        "tag": "log-manager",
+        "version": 1,
+        "description": "the default log-manager of system",
+        "manager_url": "Trunk/Log/log.php",
+        "author": "cephei",
+        "install_time": 1457589472,
+        "files": []
+    },
+    "system-cron": {
+        "id": "cea5df302f1a4c92b9b2c1cf757587f1",
+        "name": "system-cron",
+        "register": "Trunk\\Cron\\Register_Cron",
+        "version": 1,
+        "icon": "",
+        "tag": "timer",
+        "description": "the default timer of system",
+        "manager_url": "",
+        "author": "cephei",
+        "files": [],
+        "enable": 1,
+        "install_time": 1457621013
+    }
+}

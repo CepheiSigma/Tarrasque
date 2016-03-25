@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Created by PhpStorm.
+ * User: cephei
+ * Date: 3/10/16
+ * Time: 2:50 PM
+ */
+
+use Trunk\Core\Core;
+require_once __DIR__."/../../../Trunk/Core/Core.php";
+require_once __DIR__."/../../../Trunk/Core/Bootstrap.php";
+
+
+Core::getInstance()->singletonMake("system-cron")->exec();
