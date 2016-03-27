@@ -98,7 +98,7 @@ class DataBase{
     }
 
     private function checkError(){
-        if($this->db->errorCode !='00000'){
+        if(!empty($this->db->errorCode)&&$this->db->errorCode !='00000'){
             $errorInfo = $this->db->errorInfo();
             Core::getInstance()->make("system-log")->levelLog("sql:$errorInfo[2]","error","system-database");
             return $errorInfo;
@@ -110,7 +110,7 @@ class DataBase{
     }
 
     public function getLastErrorInfo(){
-        if($this->db->errorCode !='00000') {
+        if(!empty($this->db->errorCode)&&$this->db->errorCode !='00000') {
             return $this->db->errorInfo();
         }
         return false;
