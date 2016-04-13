@@ -20,7 +20,7 @@ class Installer{
         $this->modules = json_decode($json, true);
     }
 
-    public function installTrunk($filePath, $force=true)
+    public function installTrunk($filePath, $force=false)
     {
         $zipFile = zip_open($filePath);
         if ($zipFile) {
