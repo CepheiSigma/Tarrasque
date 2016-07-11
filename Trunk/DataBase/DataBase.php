@@ -21,6 +21,9 @@ class DataBase{
             if (file_exists(ROOT_PATH . "Storage/DataBase/connection.conf")) {
                 $this->config = parse_ini_file(ROOT_PATH . "Storage/DataBase/connection.conf");
                 $this->initDB($this->config["address"], $this->config["username"], $this->config["password"], $this->config["database"], $this->config["type"], $this->config["charset"]);
+
+                $this->db->setAttribute(PDO::ATTR_STRINGIFY_FETCHES, false);
+                $this->db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             } else
                 $this->initDB('127.0.0.1', 'root', 'root', 'jupiter');
         }catch(\PDOException $ex){
