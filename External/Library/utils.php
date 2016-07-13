@@ -4,11 +4,11 @@
 set_exception_handler("onExceptionOccurred");
 
 function onExceptionOccurred($exception){
-    echoResponse(json_encode([
+    echoResponse([
         "code"=>$exception->getCode(),
         "summary"=>$exception->getMessage(),
         "trace"=>$exception->getTrace()
-    ]),500);
+    ],500);
 }
 
 function echoResponse($obj,$statusCode = 200,$CORS=true){
