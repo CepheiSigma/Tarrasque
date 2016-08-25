@@ -87,7 +87,7 @@ class Curl
     }
 
     public function addToHttpHeader($key,$value){
-        $this->httpHeader[$key]=$value;
+        $this->httpHeader[]="$key:$value";
     }
     public function addToHttpForm($key,$value){
         $this->formData[$key]=$value;
@@ -101,6 +101,10 @@ class Curl
     public function close(){
         curl_close($this->request);
         $this->request = null;
+    }
+
+    public function getInfo(){
+        return curl_getinfo($this->request);
     }
 
 }
