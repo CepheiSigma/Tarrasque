@@ -9,6 +9,4 @@
 
 邮箱:cephei.cn.normal#outlook.com
 
-QQ:1104272946
-
 ![](http://7x2wk0.com1.z0.glb.clouddn.com/3QBi.jpg?imageMogr2/thumbnail/!20p)
